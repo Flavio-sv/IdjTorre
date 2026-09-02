@@ -1,0 +1,6 @@
+std = "roblox"
+
+[lints]
+deprecated = "deny"
+undefined_variable = "deny"
+shadowing = "warn"
