@@ -1,0 +1,2 @@
+--!strict
+-- LoadingScreenController: STUB

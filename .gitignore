@@ -6,3 +6,17 @@
 /*.rbxl.lock
 
 sourcemap.json
+
+# Artefatos gerados
+/Packages
+/ServerPackages
+sourcemap.json
+
+# Places gerados por build — nunca sao fonte da verdade
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+
+# Editor / OS
+.DS_Store
