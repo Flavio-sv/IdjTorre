@@ -3,6 +3,7 @@
 	GameConstants
 	Valores compartilhados entre servidor e cliente.
 	Congelado em runtime: nenhum sistema pode alterar um limiar em tempo de jogo.
+    ..Test..
 ]]
 
 local GameConstants = {}
