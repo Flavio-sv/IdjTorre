@@ -1,13 +1,33 @@
 --!strict
 --[[
-    GameEnums
-    Status: STUB — nao implementado.
+	GameEnums
+	Identificadores de estado como tipos literais.
+	Um erro de digitacao vira erro de tipo em tempo de analise, nao comparacao
+	de string silenciosamente falsa em runtime.
 ]]
 
-local GameEnums = {}
+export type RoundPhase = "Lobby" | "Starting" | "Building" | "Disaster" | "Climax" | "Reset"
 
-function GameEnums.init(): ()
-    error("[GameEnums] init() chamado antes da implementacao.", 2)
-end
+type RoundPhaseRegistry = {
+	Lobby: RoundPhase,
+	Starting: RoundPhase,
+	Building: RoundPhase,
+	Disaster: RoundPhase,
+	Climax: RoundPhase,
+	Reset: RoundPhase,
+}
 
-return GameEnums
+local roundPhaseRegistry: RoundPhaseRegistry = {
+	Lobby = "Lobby",
+	Starting = "Starting",
+	Building = "Building",
+	Disaster = "Disaster",
+	Climax = "Climax",
+	Reset = "Reset",
+}
+
+local GameEnums = {
+	RoundPhase = table.freeze(roundPhaseRegistry),
+}
+
+return table.freeze(GameEnums)
